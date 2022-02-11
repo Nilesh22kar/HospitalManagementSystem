@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compund interest</title>
+    <script>
+        
+
+        function compondInterest(){
+           var principle=parseInt(document.getElementById("nm").value);
+     
+           var year=document.getElementById("yr").value;
+        
+           var interest=document.getElementById("interest").value;
+        
+       
+            var m =Math.pow((1+(interest/100)),year);
+            
+            var CompoundInterest=((principle*m)-principle);
+
+            document.getElementById("ans").innerHTML="Compond interest : "+CompoundInterest.toFixed(2)+" Rs "
+            
+
+        }
+
+    </script>
+</head>
+<body>
+<div style="align-content: center;">
+   Amount:  <input type="text" name="nm" id="nm">
+   No of years : <input type="number" name="yr" id="yr">
+   Rate of interest: <input type="number" name="interest" id="interest">
+   <button type="button" name="btn" id="btn" onclick="compondInterest()">Calculate</button>
+   <p id="ans"></p>
+</div>
+</body>
+</html>
